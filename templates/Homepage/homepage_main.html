@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href=" {{url_for('static', filename='Homepage/Main/main.css')}}">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <a href="logout">Logout</a>
+        </div>
+
+        <div class="sidebar">
+            <button id="emails"><img src="static/Homepage/Main/images/mails.png">eMails</button>
+            <button id="application"><img src="static/Homepage/Main/images/pp.png">Application</button>
+            <button id="schedule"><img src="static/Homepage/Main/images/sched.png">Schedule</button>
+            <button id="grades"><img src="static/Homepage/Main/images/grades.png">Grades</button>
+            <button id="about"><img src="static/Homepage/Main/images/about.png">About</button>
+        </div>
+
+        <!--TEMPLATE FOR START APPLICATION PROCESS-->
+        <template id="start-application-template">
+            <div class="start-app">
+                <div class="line" style="background-color: rgb(219, 219, 219);">
+                    <h1>APPLICATION FORM</h1>
+                </div>
+
+                <div class="space">
+                    <!--JUST FOR SPACE LINE-->
+                    <h2>Personal Information</h2>
+                </div>
+
+                <div class="line">
+                    <input type="text" id="firstname" placeholder="Firstname" name="firstname">
+                    <input type="text" id="middlename" placeholder="Middlename" name="middlename">
+                    <input type="text" id="lastname" placeholder="Lastname" name="lastname">
+                </div>
+
+                <div class="space">
+                    <!--JUST FOR SPACE LINE-->
+                </div>
+
+                <div class="line">
+                    <input type="number" id="contact" placeholder="Contact Number" name="contact_number">
+                    <input type="text" id="mothersname" placeholder="Mothers Name" name="mothersname">
+                    <input type="text" id="fathersname" placeholder="Fathers Name" name="fathersname">
+                </div>
+
+                <div class="space">
+                    <!--JUST FOR SPACE LINE-->
+                </div>
+
+                <div class="line">
+                    <input type="text" id="guardian" name="guardian" placeholder="Guardian">
+                    <select name="sex" id="sex">
+                        <option>Sex</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <input type="number" id="age" placeholder="Age">
+                </div>
+
+                <div class="space">
+                    <!--JUST FOR SPACE LINE-->
+                    <h2>Address</h2>
+                </div>
+
+                <div class="line">
+                    <select id="province" name="province">
+                        <option>None</option>
+                        <option value="zamboanga_del_sur">Zamboanga Del Sur</option>
+                    </select>
+                        
+                    <select id="city" name="city">
+
+                    </select>
+
+                    <select id="barangay" name="barangay">
+
+                    </select>
+                </div>
+
+                <div class="line">
+                    
+                </div>
+
+                <div class="space">
+                    <h2>Course Preference</h2>
+                </div>
+
+                <div class="line">
+
+                </div>
+
+                <div class="line">
+                    <select id="college" style="width: 450px;" name="college">
+                        <option>None</option>
+                        <option value="ccje">College of Criminal Justice Education</option>
+                        <option value="ce">College of Engineering</option>
+                    </select>
+                </div>
+
+                <div class="line">
+                    <select id="choose-courses" style="width: 450px;" name="course">
+
+                    </select>
+                </div>
+
+                <div class="line">
+                    <button id="submitbtn">Submit</button>
+                </div>
+
+                <div class="line">
+                    <h1 style="color: red;" id="warning"></h1>
+                </div>
+
+        </template>
+
+        <div class="container" id="content">
+            
+        </div>
+
+        <script src="{{ url_for('static', filename='Homepage/main/main.js')}}"></script>
+    </body>
+</html>

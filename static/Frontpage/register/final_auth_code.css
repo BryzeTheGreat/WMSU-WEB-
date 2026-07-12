@@ -1,0 +1,111 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+body {
+    background-image: url(images/wmsuentrance.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: rgba(246, 36, 64, 0.6);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    position: absolute;
+    margin-top: auto;
+}
+
+.navlogo {
+    background-color: white;
+    border-radius: 1000px;
+    height: 80px;
+    width: 80px;
+    margin-right: auto;
+    margin-left: 20px;
+    background-image: url(images/wmsubg.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 100%;
+}
+
+/* CODE CONTAINER */
+
+.container {
+    width: 40%;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container h1 {
+    margin-top: 70px;
+}
+
+.containerlogo {
+    background-color: white;
+    border-radius: 1000px;
+    height: 120px;
+    width: 120px;
+    background-image: url(images/wmsubg.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 100%;
+}
+
+.container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container input {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+}
+
+.container button {
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: red;
+    transition: 0.3s ease;
+}
+
+.container button:hover {
+    transform: scale(1.1);
+}
+
+.container a {
+    margin-top: 80px;
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+}
+
+
+/* END */

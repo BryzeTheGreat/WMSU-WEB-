@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='Frontpage/register/final_auth_code.css')}}">
+        <title>VERIFY CODE</title>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navlogo"></div>
+        </nav>
+
+        <div class="container">
+            <h1>Code has been sent to your Account</h1>
+            <div class="containerlogo"></div>
+            <form method="POST">
+                <input type="text" name="code">
+                <button type="submit">Verify</button>
+            </form>
+            <h3 style="color: red;">
+                {% if error %}  
+                    {{ error }}
+                {% endif %}
+            </h3>
+            <a href="/resend-code">Didnt Receive a Code?</a>
+        </div>
+    </body>
+</html>

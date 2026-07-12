@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='Frontpage/register/finalizing_registering.css') }}">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navlogo"></div>
+        </nav>
+
+        <div class="container">
+
+            <h1>Finishing Up</h1>
+
+            <form method="POST">
+                <input name="firstname" placeholder="Firstname">
+                <input name="middlename" placeholder="Middlename">
+                <input name="lastname" placeholder="Lastname">
+                <input name="email" placeholder="Email Account">
+                <button type="submit">Submit</button> 
+                <h3 id="error">
+                {% if error %}
+                    {{ error }}
+                {% endif %}
+                </h3>
+            </form>
+        </div>
+    </body>
+
+</html>

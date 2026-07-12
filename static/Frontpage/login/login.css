@@ -1,0 +1,102 @@
+body {
+    background-image: url(images/wmsuentrance.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+}
+/*FOR NAVBAR*/
+.navbar {
+    background-color: rgba(246, 36, 64, 0.6);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    position: absolute;
+}
+
+.navlogo {
+    background-color: white;
+    border-radius: 1000px;
+    height: 80px;
+    width: 80px;
+    margin-right: auto;
+    margin-left: 20px;
+    background-image: url(images/wmsubg.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 100%;
+}
+/*FOR NAVBAR - END*/
+
+/* FOR THE MAIN CONTENT */
+.login-box {
+    height: 700px;
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-top: 170px;
+    margin-left: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.login-box h1 {
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.login-box input {
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.login-box button {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+}
+
+.login-box button:hover {
+    background-color: #F62440;
+}
+
+
+
+.login-logo {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 1000px;
+    background-image: url(images/wmsubg.png);
+    background-position: center;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+.login-box a {
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 black;
+    font-family: sans-serif;
+}
+
+/* MAIN CONTENT - END*/
