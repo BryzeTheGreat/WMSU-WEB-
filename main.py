@@ -39,4 +39,4 @@ main.register_blueprint(frontpage)
 main.register_blueprint(homepage)
 
 if __name__ == "__main__":
-    main.run(debug=True)
+    main.run()
