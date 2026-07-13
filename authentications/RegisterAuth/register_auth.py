@@ -1,9 +1,10 @@
-from connections.extensions import session, mail
+from connections.extensions import session
 from connections.models import Users, ApplicationForm
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 from flask_mail import Message
 import random
+from flask import current_app
 
 
 def register_new_user(username, password, name, email):
@@ -22,6 +23,7 @@ def register_new_user(username, password, name, email):
 
 #SEND THE CODE TO THE USERS GMAIL ACCOUNT
 def send_auth_code(email, code):
+    mail = current_app.extensions['mail']
     msg = Message(f'WMSU Verification Code', recipients=[email])
     msg.body = f"Hello {email}!, This is your Verification Code for your WMSU Account! {code}"
     mail.send(msg)
