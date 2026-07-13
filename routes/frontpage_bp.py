@@ -30,7 +30,7 @@ def loginpage():
             return redirect(url_for('homepage.main'))
         else:
             error = 'Wrong Password or Username'
-            return render_template('login.html', error=error)
+            return render_template('Frontpage/login.html', error=error)
     
     return render_template('Frontpage/login.html', error=error)
 
@@ -46,11 +46,11 @@ def registerpage():
 
         if verify_password != password:
             error = "Wrong Password"
-            return render_template('register.html', error=error)
+            return render_template('Frontpage/register.html', error=error)
 
         if not username or password == "":
             error = "Something went Wrong"
-            return render_template('register.html', error=error)
+            return render_template('Frontpage/register.html', error=error)
 
         session['username'] = username
         session['password'] = password
