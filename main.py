@@ -7,18 +7,7 @@ from dotenv import load_dotenv
 #LOAD DOTENV
 load_dotenv()
 
-#CONNECTIONS MODULE
-from connections.extensions import engine, session, Base, mail
-from connections.models import Users, ApplicationForm
-
-
-#ROUTES
-from routes.frontpage_bp import frontpage
-from routes.homepage_bp import homepage
 main = Flask(__name__)
-
-#DATABASE 
-Base.metadata.create_all(engine)
 
 #CONFIGS
 main.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
@@ -29,6 +18,19 @@ main.config['MAIL_USE_SSL'] = False
 main.config['MAIL_USERNAME'] = 'blizzliz12345@gmail.com'
 main.config['MAIL_PASSWORD'] = os.environ.get('GMAIL_PASSWORD')
 main.config['MAIL_DEFAULT_SENDER'] = 'noreplyWMSU@gmail.com'
+
+#CONNECTIONS MODULE
+from connections.extensions import engine, session, Base, mail
+from connections.models import Users, ApplicationForm
+
+
+#ROUTES
+from routes.frontpage_bp import frontpage
+from routes.homepage_bp import homepage
+
+#DATABASE 
+Base.metadata.create_all(engine)
+
 
 #MAIL
 mail.init_app(main)
